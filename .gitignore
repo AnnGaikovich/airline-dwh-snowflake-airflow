@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE settings
+.idea/
+.vscode/
+*.iml
+
+# Airflow local files
+logs/
+plugins/
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+airflow-scheduler.pid
+
+# Environment variables
+.env
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Snowflake connection files (if any)
+config.pyc
+
+# Data files (optional — uncomment if you don't want to share CSV)
+# data/*.csv
