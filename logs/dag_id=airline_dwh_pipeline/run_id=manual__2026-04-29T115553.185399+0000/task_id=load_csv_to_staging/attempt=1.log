@@ -1,0 +1,13 @@
+{"timestamp":"2026-04-29T11:55:54.305249Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-04-29T11:55:54.306957Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/airline_dwh_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-04-29T11:55:54.361447Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-04-29T11:55:54.362098Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-04-29T11:55:54.362373Z","level":"info","event":"Current task name:load_csv_to_staging","logger":"task.stdout"}
+{"timestamp":"2026-04-29T11:55:54.362588Z","level":"info","event":"Dag name:airline_dwh_pipeline","logger":"task.stdout"}
+{"timestamp":"2026-04-29T11:55:54.514050Z","level":"warning","event":"urllib3 (2.6.3) or chardet (6.0.0.post1)/charset_normalizer (3.4.7) doesn't match a supported version!","category":"RequestsDependencyWarning","filename":"/home/airflow/.local/lib/python3.13/site-packages/snowflake/connector/vendored/requests/__init__.py","lineno":113,"logger":"py.warnings"}
+{"timestamp":"2026-04-29T11:55:54.610357Z","level":"info","event":"Snowflake Connector for Python Version: 4.4.0, Python Version: 3.13.13, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36","logger":"snowflake.connector.connection","filename":"connection.py","lineno":620}
+{"timestamp":"2026-04-29T11:55:54.610901Z","level":"info","event":"Connecting to GLOBAL Snowflake domain","logger":"snowflake.connector.connection","filename":"connection.py","lineno":1716}
+{"timestamp":"2026-04-29T11:56:01.197565Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-04-29T11:56:01.215916Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-04-29T11:56:01.216281Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-04-29T11:56:01.216802Z","level":"info","event":"Task operator:<Task(PythonOperator): load_csv_to_staging>","logger":"task.stdout"}
