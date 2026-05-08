@@ -22,6 +22,7 @@ CREATE OR REPLACE TABLE stg_airline_raw (
 
 -- Alternatively, a typed staging table (showing main columns)
 CREATE OR REPLACE TABLE stg_airline_typed (
+    row_index         NUMBER,   
     passenger_id      STRING,
     first_name        STRING,
     last_name         STRING,
@@ -42,7 +43,10 @@ CREATE OR REPLACE TABLE stg_airline_typed (
     loaded_at         TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
 );
 
--- For simplicity we use the typed table. We'll assume the CSV is loaded into it via Airflow.
+-- Stream for incremental processing (tracks only new rows)
+CREATE OR REPLACE STREAM stg_airline_stream ON TABLE stg_airline_typed
+    APPEND_ONLY = TRUE
+    COMMENT = 'Stream for ETL incremental load';
 
 -- =====================================================
 -- 3. Core Layer (Dimensions & Fact)
